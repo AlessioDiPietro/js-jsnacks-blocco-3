@@ -22,7 +22,7 @@ function takeRange (array, min, max){
 }
 
 var rangeNum = takeRange (database, valoreMax, valoreMin)
-document.getElementById("esecizio_1").innerHTML = rangeNum;
+document.getElementById("esercizio_1").innerHTML = rangeNum;
 
 
 //! esercizio 2
@@ -33,11 +33,11 @@ document.getElementById("esecizio_1").innerHTML = rangeNum;
 
 var word1 = prompt("inserisci una parola qui");
 
-console.log(word1.length);
+console.log("la PRIMA PAROLA è LUNGA ", word1.length);
 
 var word2 = prompt("inserisci una parola qui");
 
-console.log(word2.length);
+console.log("la PRIMA SECONDA è LUNGA ", word2.length);
 
 // Verificare tramite una funzione che le due parole abbiano la stessa lunghezza.
 
@@ -54,7 +54,7 @@ function verificaLunghezza (parola1, parola2){
 }
 
 var validator = verificaLunghezza(word1, word2);
-document.getElementById("esecizio_2").innerHTML = validator;
+document.getElementById("esercizio_2").innerHTML = validator;
 
 
 //! esercizio 3
@@ -76,6 +76,20 @@ function mixer (gruppoA, gruppoB){
     return arrayMix;
 }
 
-console.log(mixer (array1,array2))
 var arMix = mixer (array1,array2);
-document.getElementById("esecizio_3").innerHTML = arMix;
+document.getElementById("esercizio_3").innerHTML = arMix;
+
+
+//! esercizio 4
+
+var nome = prompt("Inserisci un nome QUI");
+
+function capitalize (word) {
+
+    word = word.charAt(0).toUpperCase() + word.substring(1).toLowerCase();
+    
+     return word;
+}
+
+var cptl = capitalize(nome)
+document.getElementById("esercizio_4").innerHTML = cptl;
