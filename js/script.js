@@ -28,6 +28,7 @@ document.getElementById("esecizio_1").innerHTML = rangeNum;
 //! esercizio 2
 // Dare la possibilità di inserire due parole. Verificare tramite una funzione che le due parole abbiano la stessa lunghezza.  Se hanno la stessa lunghezza, stamparle entrambe altrimenti stampare la più lunga delle due.
 
+
 // inserire due parole.
 
 var word1 = prompt("inserisci una parola qui");
@@ -57,3 +58,24 @@ document.getElementById("esecizio_2").innerHTML = validator;
 
 
 //! esercizio 3
+// Scrivi una funzione che fonda due array (con lo stesso numero di elementi) prendendo alternativamente gli elementi da uno e dall’altro
+// es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+
+
+var array1 = ["a","b","c"];
+
+var array2 = [1,2,3]
+
+function mixer (gruppoA, gruppoB){
+    var arrayMix = [];
+
+    for(i = 0; i < gruppoA.length; i++){
+        arrayMix.push(gruppoA[i]);
+        arrayMix.push(gruppoB[i]);
+    }
+    return arrayMix;
+}
+
+console.log(mixer (array1,array2))
+var arMix = mixer (array1,array2);
+document.getElementById("esecizio_3").innerHTML = arMix;
